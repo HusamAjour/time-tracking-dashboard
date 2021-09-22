@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body class="body">
+  <main class="main dark-blue-bg">
+    <div class="container">
+      <div class="nav">
+        <div class="nav-card">
+          <div class="nav-top">
+            <div class="avatar">
+              <img src="./images/image-jeremy.png" />
+            </div>
+            <div class="nav-info">
+              <div class="nav-text color-pale-blue">
+                <p>Report for</p>
+              </div>
+              <div class="nav-name">
+                <h1>Jeremy Robson</h1>
+              </div>
+            </div>
+          </div>
+          <div class="nav-buttons">
+            <ul>
+              <li class="color-pale-blue" id="daily" onclick="updateReport(this, this.id)">Daily</li>
+              <li class="color-pale-blue white-color" id="weekly" onclick="updateReport(this, this.id)">Weekly</li>
+              <li class="color-pale-blue" id="monthly" onclick="updateReport(this, this.id)">Monthly</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <!-- card 1 -->
+        <div class="card">
+          <div class="card-top work"></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Work</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class="card-numbers">
+              <div class="card-current">
+                <h3><span id="current-1">32</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-1">Week</span> - <span id="previous-1">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card">
+          <div class="card-top play"></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Play</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class="card-numbers">
+
+              <div class="card-current">
+                <h3><span id="current-2">10</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-2">Week</span> - <span id="previous-2">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3-->
+        <div class="card">
+          <div class="card-top study"></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Study</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class="card-numbers">
+
+              <div class="card-current">
+                <h3><span id="current-3">4</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-3">Week</span> - <span id="previous-3">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card">
+          <div class="card-top exercise"></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Exercise</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class="card-numbers">
+
+              <div class="card-current">
+                <h3><span id="current-4">4</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-4">Week</span> - <span id="previous-4">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 5 -->
+        <div class="card">
+          <div class="card-top social"></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Social</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class=" card-numbers">
+              <div class="card-current">
+                <h3><span id="current-5">5</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-5">Week</span> - <span id="previous-5">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 6-->
+        <div class="card">
+          <div class="card-top self-care "></div>
+          <div class="card-body">
+            <div class="card-title">
+              <h2>Self Care</h2>
+              <img src="./images/icon-ellipsis.svg" class="svg-img" id="test" onmouseover="changeParentColor(this)"
+                onmouseout="removeParentClass(this)">
+            </div>
+            <div class="card-numbers">
+              <div class="card-current">
+                <h3><span id="current-6">2</span>hrs</h3>
+              </div>
+              <div class="card-previous color-pale-blue">
+                <h4>Last <span id="unit-6">Week</span> - <span id="previous-6">36</span>hrs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
